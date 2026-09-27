@@ -1,4 +1,4 @@
-# saraha-anonymous-feedback-app
+# Saraha Anonymous Platform
 
 Fullstack anonymous feedback and social messaging platform built with Node.js, Express, MongoDB, and JWT.
 
@@ -9,7 +9,7 @@ This repository is part of Ziad Taha's public portfolio. It may represent a prod
 | Detail | Value |
 |---|---|
 | Primary language | JavaScript |
-| Repository | https://github.com/ZiadtahaM/saraha-anonymous-feedback-app |
+| Repository | https://github.com/ZiadtahaM/saraha-anonymous-platform |
 | Documentation status | Initial project map added during portfolio quality pass |
 
 ## Local development
