@@ -1,31 +1,29 @@
 {
-  "name": "sarahaa",
-  "version": "1.0.0",
+  "name": "saraha-anonymous-platform",
+  "version": "1.1.0",
+  "description": "Anonymous inbox API: each user gets a public link, anyone can send them an anonymous message, the owner reads, answers publicly, blocks and reports.",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "test": "node --test --test-concurrency=1 test/api.test.js"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "description": "",
+  "engines": { "node": ">=20" },
   "dependencies": {
     "bcrypt": "^5.1.1",
-    "cloudinary": "^2.5.1",
-    "crypto": "^1.0.1",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.9.5",
-    "multer": "^1.4.5-lts.1",
-    "nodemailer": "^6.10.0",
-    "passport": "^0.7.0",
-    "passport-google-oauth20": "^2.0.0"
+    "mongoose": "^8.9.5"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "mongodb-memory-server": "^10.1.2",
+    "nodemon": "^3.1.9",
+    "supertest": "^7.0.0"
   }
 }
