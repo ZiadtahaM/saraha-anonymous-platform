@@ -46,7 +46,7 @@ npm test
 
 - No frontend, this is the API only
 - No email verification or password reset
-- No Google login. The early prototype files for OAuth, OTP, Cloudinary and posts (under `src/modules`, `src/db`, `src/services`, `src/config`, `src/posts`, `src/reacts`) are unfinished leftovers that the MVP does not use
+- No Google login, OTP email or image upload. The unfinished prototype files for those were removed from the repo
 - No content moderation beyond block and report, and reports are only flagged, nothing reviews them yet
 - Rate limits are in memory, so they reset on restart and do not share state across instances
 
