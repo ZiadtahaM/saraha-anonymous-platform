@@ -1,7 +1,4 @@
 // middlewares/auth.middleware.js
-import { User } from '../db/models/usermodel.js';
-import jwt from 'jsonwebtoken';
-
 import passport from 'passport';
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 import { User } from '../db/models/usermodel.js';
