@@ -1,15 +1,14 @@
-import express from 'express';
-import bootstrap from './src/utils/controllers.js';
-import dotenv from 'dotenv';
-import path from 'path';
-import './src/config/passport.js';
-dotenv.config(path.resolve(".env"));
-const app = express(); 
+import 'dotenv/config';
+import mongoose from 'mongoose';
+import { createApp } from './src/app.js';
 
-bootstrap(app, express);
-const port = 3000;
+const port = process.env.PORT || 3000;
+const uri = process.env.MONGO_URI;
 
+if (!uri || !process.env.JWT_SECRET || !process.env.FINGERPRINT_SECRET) {
+  console.error('Set MONGO_URI, JWT_SECRET and FINGERPRINT_SECRET (see .env.example).');
+  process.exit(1);
+}
 
-// Initialize passport
-app.use(passport.initialize());
-app.listen(port, () => console.log(`Server is running on port ${port}`));
+await mongoose.connect(uri);
+createApp().listen(port, () => console.log(`Saraha API listening on port ${port}`));
